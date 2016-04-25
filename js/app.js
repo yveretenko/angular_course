@@ -1,1 +1,1 @@
-var App = angular.module('myApp', ['ngRoute', 'ngResource', 'ngSanitize']);
+var App = angular.module('myApp', ['ngRoute', 'ngResource', 'base64']);
