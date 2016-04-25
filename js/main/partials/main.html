@@ -1,0 +1,14 @@
+<div class="container">
+    <nav class="navbar navbar-default" ng-show="showBar">
+        <div class="container-fluid">
+            <p class="navbar-text">
+                Signed in as <span ng-bind="currentUsername"></span>
+                <img ng-src="{{avatar}}">
+            </p>
+
+            <button type="button" class="btn btn-primary navbar-btn" ng-click="logout()">Sign out</button>
+        </div>
+    </nav>
+
+    <h3>Main page, we will have some data here</h3>
+</div>
