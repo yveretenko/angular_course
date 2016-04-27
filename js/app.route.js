@@ -6,10 +6,17 @@ App.config(function($routeProvider, $locationProvider) {
 
     $routeProvider
     .when('/', {
-        templateUrl: 'js/main/partials/main.html', controller: 'MainController'
+        templateUrl: 'js/main/partials/main.html',
+        controller:  'MainController',
+        resolve: {
+            isLoggedIn: function(AuthService) {
+                return AuthService.isLoggedIn();
+            }
+        }
     })
     .when('/login', {
-        templateUrl: 'js/main/partials/login.html', controller: 'LoginController'
+        templateUrl: 'js/login/partials/login.html',
+        controller:  'LoginController'
     })
     .otherwise('/');
 });

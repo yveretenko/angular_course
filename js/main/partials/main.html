@@ -2,8 +2,8 @@
     <nav class="navbar navbar-default" ng-show="showBar">
         <div class="container-fluid">
             <p class="navbar-text">
-                Signed in as <span ng-bind="currentUsername"></span>
-                <img ng-src="{{avatar}}">
+                Signed in as {{currentUser.name}}
+                <img ng-src="{{currentUser.avatar_urls[24]}}">
             </p>
 
             <button type="button" class="btn btn-primary navbar-btn" ng-click="logout()">Sign out</button>
