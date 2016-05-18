@@ -1,0 +1,17 @@
+div(ng-include="'/app/components/navbar/navbar.html'")
+
+#page-wrapper
+    .container-fluid
+        .col-md-4
+            form(role='form')
+                .form-group
+                    label Title
+                    input.form-control(ng-model='vm.post.title')
+                .form-group
+                    label Content
+                    textarea.form-control(rows='3', ng-model='vm.post.content')
+                .form-group
+                    label Status
+                    select.form-control(ng-model='vm.post.status', ng-options='option for option in vm.statuses')
+                .form-group
+                    button.btn.btn-lg.btn-success(type='button', ng-click='vm.save();') Save

@@ -1,0 +1,21 @@
+div(ng-include="'/app/components/navbar/navbar.html'")
+
+#page-wrapper
+    .container-fluid
+        h3 Posts
+        .row
+            .col-md-6
+                table.table.table-bordered.table-hover.table-striped
+                    thead
+                        tr
+                            th Title
+                            th(width='18%') Date
+                            th(width='18%') Actions
+                    tbody
+                        tr.post(ng-repeat='post in vm.posts track by $index')
+                            td {{post.title.rendered}}
+                            td {{post.date}}
+                            td
+                                .btn-block
+                                    a.btn.btn-primary.btn-sm(href='#', ng-href='/posts/{{post.id}}') view
+                                    a.btn.btn-warning.pull-right.btn-sm(href='#', ng-href='/edit-post/{{post.id}}') edit
